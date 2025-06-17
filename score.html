@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resultado do Jogo</title>
+  <link rel="stylesheet" href="score.css" />
+</head>
+<body>
+    <div class="window-controls">
+        <img src="images/window.png" alt="Maximizar" class="icon-btn" onclick="maximizar()" />
+        <img src="images/close.png" alt="Fechar" class="icon-btn" onclick="fechar()" />
+    </div>
+    <div class="main-result" id="main-result">Resultado</div>
+    <div class="result-container">
+        <h1 id="result-message">Loading...</h1>
+        <img src="images/play-again.png" alt="Play Again Button" class="start-btn" onclick="startGame()" />
+    </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const winner = params.get('winner');
+
+    const message = winner === 'X' ? "It's okay — My heart's still yours ♡" :
+                    winner === 'O' ? "You won my heart! ♡" :
+                    "Empate ou jogo terminado.";
+
+    const mainMessage = winner === 'X' ? "You lost" :
+                    winner === 'O' ? "You win!" :
+                    "Empate";
+
+    document.getElementById('result-message').textContent = message;
+    document.getElementById('main-result').textContent = mainMessage;
+
+    document.getElementById('play-again').addEventListener('click', () => {
+      window.location.href = 'game-page.html';
+    });
+
+    function startGame() {
+    window.location.href = 'game-page.html',
+    'TicTacToe',
+    'width=295,height=403,toolbar=no,menubar=no,scrollbars=no,resizable=no'
+    }
+  </script>
+</body>
+</html>

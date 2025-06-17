@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Launcher</title>
+  <link rel="stylesheet" href="launcher.css" />
+</head>
+<body>
+  <button onclick="abrirJogo()">Open Game</button>
+
+  <script>
+    function abrirJogo() {
+      const largura = 295;
+      const altura = 403;
+      const left = (screen.width - largura) / 2;
+      const top = (screen.height - altura) / 2;
+
+      const janela = window.open(
+        'homepage.html',
+        'ticTacToeWindow',
+        `width=${largura},height=${altura},left=${left},top=${top},resizable=no`
+      );
+
+      janela.onload = function () {
+        const ajustaLargura = largura - (janela.outerWidth - janela.innerWidth);
+        const ajustaAltura = altura - (janela.outerHeight - janela.innerHeight);
+        janela.resizeTo(ajustaLargura, ajustaAltura);
+      };
+    }
+  </script>
+</body>
+</html>

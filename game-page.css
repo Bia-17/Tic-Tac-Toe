@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+html{
+  margin: 0;
+  padding: 0;
+  width: 295px;
+  height: 403px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 295px;
+  height: 403px;
+  background-color: bisque;
+  background-image: url('images/game-page.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Pixelify Sans", sans-serif;
+  overflow: hidden;
+  color: white;
+  text-shadow: 0 0 5px black;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 65px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 236px;
+}
+
+.game-container {
+  position: relative;
+  width: 295px;
+  height: 403px;
+}
+
+.score-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.board {
+  top: 73px;
+  left: 28px;
+  width: 236px;
+  height: 236px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.window-controls {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.icon-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+.cell {
+  width: 78.66px;
+  height: 78.66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.cell img {
+  width: 64px;
+  height: 64px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.scoreboard {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
