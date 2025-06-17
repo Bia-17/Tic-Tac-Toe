@@ -1,31 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
-html{
-  margin: 0;
-  padding: 0;
-  width: 295px;
-  height: 403px;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-}
-
 body {
   margin: 0;
   padding: 0;
+  background-color: #fcebd4;
+  font-family: "Pixelify Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
   width: 295px;
   height: 403px;
-  background-color: bisque;
   background-image: url('images/game-page.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  font-family: "Pixelify Sans", sans-serif;
-  overflow: hidden;
-  color: white;
-  text-shadow: 0 0 5px black;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
 }
 
 .content-wrapper {
@@ -36,12 +31,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 236px;
-}
-
-.game-container {
-  position: relative;
-  width: 295px;
-  height: 403px;
 }
 
 .score-icon {
