@@ -1,31 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
-html{
-  margin: 0;
-  padding: 0;
-  width: 295px;
-  height: 403px;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-}
-
 body {
   margin: 0;
   padding: 0;
+  background-color: #fcebd4;
+  font-family: "Pixelify Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
   width: 295px;
   height: 403px;
-  background-color: bisque;
   background-image: url('images/score-page.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  font-family: "Pixelify Sans", sans-serif;
-  overflow: hidden;
-  color: white;
-  text-shadow: 0 0 5px black;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
 }
 
 .window-controls {
@@ -70,6 +65,7 @@ body {
 }
 
 h1 {
+  color: white;
   font-size: 20px;
   margin-top: -40px;
   animation: float 3s ease-in-out infinite;

@@ -2,10 +2,12 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resultado do Jogo</title>
   <link rel="stylesheet" href="score.css" />
 </head>
 <body>
+  <div class="container">
     <div class="window-controls">
         <img src="images/window.png" alt="Maximizar" class="icon-btn" onclick="maximizar()" />
         <img src="images/close.png" alt="Fechar" class="icon-btn" onclick="fechar()" />
@@ -15,7 +17,7 @@
         <h1 id="result-message">Loading...</h1>
         <img src="images/play-again.png" alt="Play Again Button" class="start-btn" onclick="startGame()" />
     </div>
-
+  </div>
   <script>
     const params = new URLSearchParams(window.location.search);
     const winner = params.get('winner');

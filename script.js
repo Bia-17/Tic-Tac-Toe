@@ -23,7 +23,18 @@ function maximizar() {
 }
 
 function startGame() {
-    window.location.href = 'game-page.html',
-    'TicTacToe',
-    'width=295,height=403,toolbar=no,menubar=no,scrollbars=no,resizable=no'
-}
+      const largura = 295;
+      const altura = 403;
+      const left = (screen.width - largura) / 2;
+      const top = (screen.height - altura) / 2;
+
+        window.location.href = 'game-page.html',
+        'ticTacToeWindow',
+        `width=${largura},height=${altura},left=${left},top=${top},toolbar=no,menubar=no,scrollbars=no,resizable=no`
+
+      janela.onload = function () {
+        const ajustaLargura = largura - (janela.outerWidth - janela.innerWidth);
+        const ajustaAltura = altura - (janela.outerHeight - janela.innerHeight);
+        janela.resizeTo(ajustaLargura, ajustaAltura);
+      };
+    }
