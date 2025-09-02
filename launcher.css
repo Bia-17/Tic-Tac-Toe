@@ -30,3 +30,18 @@ button:hover {
 button:active {
   transform: scale(0.95);
 }
+
+@media (max-width: 768px) {
+  button {
+    padding: 20px 60px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    padding: 25px 70px;
+    font-size: 1.8rem;
+  }
+}
